@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Car Remote Control Demo</string>
+    <string name="suresoft_web">http://www.suresofttech.com</string>
+    <string name="ip_address_hint">Please enter IP Address.</string>
+    <string name="server_port_hint">Port Number</string>
+    <string name="vin_number_hint">VIN(Vehicle Info Number)</string>
+    <string name="btn_connect">Connect</string>
+    <string name="btn_clear">Clear All</string>
+    <string name="empty_string">""</string>
+    <string name="error_msg_1">Invalid IP Address entered. Please check IP Address.</string>
+    <string name="error_msg_2">Invalid IP Port entered. Please check Port Number.</string>
+    <string name="error_msg_3">VIN Number should enter at least 17 Characters.</string>
+    <string name="error_msg_4">Please enter IP Address.</string>
+    <string name="error_msg_5">Please enter IP Port.</string>
+    <string name="error_msg_6">Please enter VIN Number.</string>
+    <string name="title_activity_control_system2">ControlSystemActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+</resources>
