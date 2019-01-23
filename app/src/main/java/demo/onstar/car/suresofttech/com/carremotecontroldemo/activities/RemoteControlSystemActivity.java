@@ -1,5 +1,6 @@
 package demo.onstar.car.suresofttech.com.carremotecontroldemo.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.design.widget.NavigationView;
@@ -75,7 +76,8 @@ public class RemoteControlSystemActivity extends AppCompatActivity
         if (id == R.id.nav_remote_control) {
 
         } else if (id == R.id.nav_navigation_map) {
-
+            Intent intent = new Intent(RemoteControlSystemActivity.this, MapActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_vehicle_status) {
 
         } else if (id == R.id.nav_system_configuration) {
