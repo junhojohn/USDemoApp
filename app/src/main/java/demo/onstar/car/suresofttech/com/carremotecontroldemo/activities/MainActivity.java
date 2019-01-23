@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
                 }else{
                     ProjectManager.getDefault().createModel(vinNumber);
                     ProjectManager.getDefault().updateModelBy(vinNumber, ipAddress, ipPort);
-                    Toast.makeText(MainActivity.this, "Log-in success!" + Const.NEXT_LINE + ProjectManager.getDefault().toString(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Log-in success!" + Const.NEXT_LINE + ProjectManager.getDefault().toString(vinNumber), Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(MainActivity.this, RemoteControlSystemActivity.class);
                     startActivity(intent);
                 }

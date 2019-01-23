@@ -1,25 +1,27 @@
 package demo.onstar.car.suresofttech.com.carremotecontroldemo.activities;
 
+import demo.onstar.car.suresofttech.com.carremotecontroldemo.R;
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
 import demo.onstar.car.suresofttech.com.carremotecontroldemo.R;
 
-public class RemoteControlSystemActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class VehicleStatusActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_remote_control_system);
+        setContentView(R.layout.activity_vehicle_status);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         createToolbarIcon();
@@ -49,7 +51,7 @@ public class RemoteControlSystemActivity extends AppCompatActivity
 //        // Inflate the menu; this adds items to the action bar if it is present.
 //        getMenuInflater().inflate(R.menu.menu_remote_control_system, menu);
 //        return true;
-          return false;
+        return false;
     }
 
     @Override
@@ -74,18 +76,18 @@ public class RemoteControlSystemActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_remote_control) {
-
+            Intent intent = new Intent(VehicleStatusActivity.this, RemoteControlSystemActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_navigation_map) {
-            Intent intent = new Intent(RemoteControlSystemActivity.this, MapActivity.class);
+            Intent intent = new Intent(VehicleStatusActivity.this, MapActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_vehicle_status) {
-            Intent intent = new Intent(RemoteControlSystemActivity.this, VehicleStatusActivity.class);
-            startActivity(intent);
+
         } else if (id == R.id.nav_system_configuration) {
-            Intent intent = new Intent(RemoteControlSystemActivity.this, ConfigurationActivity.class);
+            Intent intent = new Intent(VehicleStatusActivity.this, ConfigurationActivity.class);
             startActivity(intent);
         } else if(id == R.id.nav_logout){
-            Intent intent = new Intent(RemoteControlSystemActivity.this, MainActivity.class);
+            Intent intent = new Intent(VehicleStatusActivity.this, MainActivity.class);
             startActivity(intent);
         }
 

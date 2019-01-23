@@ -20,5 +20,9 @@
             android:id="@+id/nav_system_configuration"
             android:icon="@drawable/img_config"
             android:title="@string/configuration" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/img_logout"
+            android:title="Logout" />
     </group>
 </menu>

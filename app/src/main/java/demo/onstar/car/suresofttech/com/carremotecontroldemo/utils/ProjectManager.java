@@ -54,14 +54,14 @@ public class ProjectManager {
         model.getMap().clear();
     }
 
-    @Override
-    public String toString() {
+    public String toString(String vinNumber) {
         StringBuffer sb = new StringBuffer();
-        for(String vinNumber : model.getMap().keySet()){
+        TargetConnectionInfo info = findModelBy(vinNumber);
+        if(info != null){
             sb.append("[VIN]:");
             sb.append(vinNumber);
             sb.append(Const.NEXT_LINE);
-            sb.append(model.getMap().get(vinNumber).toString());
+            sb.append(info.toString());
         }
         return sb.toString();
     }
