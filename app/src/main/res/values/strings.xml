@@ -13,11 +13,12 @@
     <string name="error_msg_4">Please enter IP Address.</string>
     <string name="error_msg_5">Please enter IP Port.</string>
     <string name="error_msg_6">Please enter VIN Number.</string>
-    <string name="title_activity_control_system2">ControlSystemActivity2</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="remote_control">Remote Control</string>
+    <string name="navigation_map">Navigation Map</string>
+    <string name="vehicle_status">Vehicle Status</string>
+    <string name="configuration">Configurations</string>
 </resources>

@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".activities.ControlSystemActivity2"
-    tools:showIn="@layout/app_bar_control_system2">
+    tools:context=".activities.RemoteControlSystemActivity"
+    tools:showIn="@layout/bar_remote_control_system">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -67,7 +67,7 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/btn_turn_by_turn"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/text_border"
+        android:background="@drawable/style_text_view_border"
 
         android:textColor="@android:color/black"
         android:textSize="20dp" />

@@ -16,10 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.ControlSystemActivity" />
         <activity
-            android:name=".activities.ControlSystemActivity2"
-            android:label="@string/title_activity_control_system2"
+            android:name=".activities.RemoteControlSystemActivity"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 

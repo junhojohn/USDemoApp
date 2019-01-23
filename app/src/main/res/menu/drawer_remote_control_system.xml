@@ -5,20 +5,20 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/remote_control"
+            android:id="@+id/nav_remote_control"
             android:icon="@drawable/img_remote_control"
-            android:title="Remote Control" />
+            android:title="@string/remote_control" />
         <item
-            android:id="@+id/navigation_map"
+            android:id="@+id/nav_navigation_map"
             android:icon="@drawable/img_nav_map"
-            android:title="Navigation Map" />
+            android:title="@string/navigation_map" />
         <item
-            android:id="@+id/vehicle_status"
+            android:id="@+id/nav_vehicle_status"
             android:icon="@drawable/img_vehicle_status"
-            android:title="Vehicle Status" />
+            android:title="@string/vehicle_status" />
         <item
-            android:id="@+id/system_configuration"
+            android:id="@+id/nav_system_configuration"
             android:icon="@drawable/img_config"
-            android:title="Configuration" />
+            android:title="@string/configuration" />
     </group>
 </menu>
