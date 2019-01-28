@@ -6,11 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".activities.MapActivity"
+    tools:context=".activities.OnStarMapActivity"
     tools:showIn="@layout/bar_map">
 
-    <TextView
+    <fragment
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/onstarMap"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="This is map page."/>
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

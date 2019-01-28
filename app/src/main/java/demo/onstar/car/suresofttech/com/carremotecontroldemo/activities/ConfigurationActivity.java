@@ -13,8 +13,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import demo.onstar.car.suresofttech.com.carremotecontroldemo.R;
-
 public class ConfigurationActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -79,7 +77,7 @@ public class ConfigurationActivity extends AppCompatActivity
             Intent intent = new Intent(ConfigurationActivity.this, RemoteControlSystemActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_navigation_map) {
-            Intent intent = new Intent(ConfigurationActivity.this, MapActivity.class);
+            Intent intent = new Intent(ConfigurationActivity.this, OnStarMapActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_vehicle_status) {
             Intent intent = new Intent(ConfigurationActivity.this, VehicleStatusActivity.class);
