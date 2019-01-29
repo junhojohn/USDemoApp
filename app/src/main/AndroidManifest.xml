@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAHzeiA4WDmAyRhYAK36q2I6nuQSEsSBgw" />
@@ -37,6 +36,7 @@
             android:name=".activities.ConfigurationActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.DetailPageActivity"></activity>
     </application>
 
 </manifest>

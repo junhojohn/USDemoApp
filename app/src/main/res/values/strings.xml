@@ -21,4 +21,11 @@
     <string name="navigation_map">Navigation Map</string>
     <string name="vehicle_status">Vehicle Status</string>
     <string name="configuration">Configurations</string>
+    <string name="strCity">Sydney</string>
+    <string name="strWeather">Sunny</string>
+    <string name="strTemp">32°C</string>
+    <string name="txtTemp">Temp</string>
+    <string name="strWindSpeed">5kmph</string>
+    <string name="txtWindSpeed">WindSpeed</string>
+    <string name="Separator">---</string>
 </resources>
