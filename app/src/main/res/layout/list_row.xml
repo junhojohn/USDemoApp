@@ -23,7 +23,7 @@
             android:layout_height="60dip"
             android:layout_gravity="top"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/sunny" />
+            android:src="@drawable/img_trips" />
 
     </LinearLayout>
 

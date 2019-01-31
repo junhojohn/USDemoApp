@@ -159,7 +159,9 @@ public class VehicleStatusActivity extends AppCompatActivity
 
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {
-
+                    if(position == 0 || position == 5){
+                        return;
+                    }
                     Intent i = new Intent();
                     i.setClass(VehicleStatusActivity.this, DetailPageActivity.class);
 

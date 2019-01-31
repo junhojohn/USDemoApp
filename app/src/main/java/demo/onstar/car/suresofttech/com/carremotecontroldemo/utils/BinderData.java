@@ -1,5 +1,7 @@
 package demo.onstar.car.suresofttech.com.carremotecontroldemo.utils;
 import demo.onstar.car.suresofttech.com.carremotecontroldemo.R;
+
+import android.graphics.Color;
 import android.widget.BaseAdapter;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,6 +33,7 @@ public class BinderData extends BaseAdapter {
     ImageView thumb_image;
     List<HashMap<String,String>> weatherDataCollection;
     ViewHolder holder;
+    ImageView arrowImageView;
     public BinderData() {
         // TODO Auto-generated constructor stub
     }
@@ -72,6 +75,7 @@ public class BinderData extends BaseAdapter {
             holder.tvWeather = (TextView)vi.findViewById(R.id.tvCondition); // city weather overview
             holder.tvTemperature =  (TextView)vi.findViewById(R.id.tvTemp); // city temperature
             holder.tvWeatherImage =(ImageView)vi.findViewById(R.id.list_image); // thumb image
+            arrowImageView = (ImageView)vi.findViewById(R.id.imageView1);
 
             vi.setTag(holder);
         }
@@ -85,6 +89,23 @@ public class BinderData extends BaseAdapter {
         holder.tvCity.setText(weatherDataCollection.get(position).get(KEY_CITY));
         holder.tvWeather.setText(weatherDataCollection.get(position).get(KEY_CONDN));
         holder.tvTemperature.setText(weatherDataCollection.get(position).get(KEY_TEMP_C));
+
+        if(weatherDataCollection.get(position).get(KEY_CITY).equals("Next service") ||
+                weatherDataCollection.get(position).get(KEY_CITY).equals("Brakepads") ){
+            arrowImageView.setVisibility(View.GONE);
+            arrowImageView.setSelected(false);
+        }
+        if(weatherDataCollection.get(position).get(KEY_CITY).equals("Next service") ||
+                weatherDataCollection.get(position).get(KEY_CITY).equals("Trips") ||
+                weatherDataCollection.get(position).get(KEY_CITY).equals("Brakepads")){
+            holder.tvWeather.setTextColor(Color.rgb(219,151,0));
+        }else if(weatherDataCollection.get(position).get(KEY_CITY).equals("Fuel level")){
+            holder.tvWeather.setTextColor(Color.RED);
+        }else if(weatherDataCollection.get(position).get(KEY_CITY).equals("Vehicle")){
+            holder.tvWeather.setTextColor(Color.rgb(36,120,255));
+        }else{
+            holder.tvWeather.setTextColor(Color.BLACK);
+        }
 
         //Setting an image
         String uri = "drawable/"+ weatherDataCollection.get(position).get(KEY_ICON);

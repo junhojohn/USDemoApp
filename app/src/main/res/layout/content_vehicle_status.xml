@@ -9,6 +9,10 @@
     tools:context=".activities.VehicleStatusActivity"
     tools:showIn="@layout/bar_vehicle_status">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="202dp"
+        android:src="@drawable/img_traverse" />
     <ListView
 
         android:id="@+id/list"

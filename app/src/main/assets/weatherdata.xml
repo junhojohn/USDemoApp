@@ -2,47 +2,56 @@
 <Weather>
 	<weatherdata>
 	    <id>1</id>
-		<city>Berlin</city>
-       	<tempc>0°C</tempc>
-       	<tempf>32°F</tempf>
-		<condition>Snowing</condition>
-		<windspeed>5 kmph</windspeed>
-		<icon>snowing</icon>
+		<city>Next service</city>
+       	<tempc> </tempc>
+       	<tempf>tempf</tempf>
+		<condition>July 30, 2016</condition>
+		<windspeed>windspeed</windspeed>
+		<icon>img_next_service</icon>
 	</weatherdata>
 	<weatherdata>
 	    <id>2</id>
-		<city>Bangalore</city>
-		<tempc>23°C</tempc>
-       	<tempf>73.4°F</tempf>
-		<condition>Thunderstorms</condition>
-		<windspeed>10 kmph</windspeed>
-		<icon>thunder</icon>
+		<city>Fuel level</city>
+		<tempc> </tempc>
+       	<tempf>tempf</tempf>
+		<condition>11%</condition>
+		<windspeed>windspeed</windspeed>
+		<icon>img_fuel_level</icon>
 	</weatherdata>
 	<weatherdata>
 	    <id>3</id>
-		<city>London</city>
-		<tempc>5°C</tempc>
-       	<tempf>41°F</tempf>
-		<condition>Rainy</condition>
-		<windspeed>2 kmph</windspeed>
-		<icon>rainy</icon>
+		<city>Vehicle</city>
+		<tempc> </tempc>
+       	<tempf>tempf</tempf>
+		<condition>unlocked</condition>
+		<windspeed>windspeed</windspeed>
+		<icon>img_vehicle</icon>
 	</weatherdata>
 	<weatherdata>
 	    <id>4</id>
-		<city>New York</city>
-       	<tempc>18°C</tempc>
-       	<tempf>64.4°F</tempf>
-		<condition>Cloudy</condition>
-		<windspeed>7 kmph</windspeed>
-		<icon>cloudy</icon>
+		<city>Tire Pressure</city>
+       	<tempc> </tempc>
+       	<tempf>tempf</tempf>
+		<condition> </condition>
+		<windspeed>windspeed</windspeed>
+		<icon>img_tire_pressure</icon>
 	</weatherdata>
 	<weatherdata>
 	    <id>5</id>
-		<city>Sydney</city>
-       	<tempc>32°C</tempc>
-       	<tempf>89.6°F</tempf>
-		<condition>Sunny</condition>
-		<windspeed>10 kmph</windspeed>
-		<icon>sunny</icon>
+		<city>Trips</city>
+       	<tempc> </tempc>
+       	<tempf>tempf</tempf>
+		<condition>Your last journey</condition>
+		<windspeed>windspeed</windspeed>
+		<icon>img_trips</icon>
+	</weatherdata>
+	<weatherdata>
+		<id>6</id>
+		<city>Brakepads</city>
+		<tempc> </tempc>
+		<tempf>tempf</tempf>
+		<condition>normal</condition>
+		<windspeed>windspeed</windspeed>
+		<icon>img_brake_pad</icon>
 	</weatherdata>
 </Weather>
