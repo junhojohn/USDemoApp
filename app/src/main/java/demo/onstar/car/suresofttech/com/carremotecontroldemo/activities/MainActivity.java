@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
@@ -50,10 +51,12 @@ public class MainActivity extends AppCompatActivity implements TextWatcher {
         edit_txt_ip_port = (EditText)findViewById(R.id.input_ip_port);
         edit_txt_vin_num = (EditText)findViewById(R.id.input_vin_number);
 
+        edit_txt_ip_address.setInputType(InputType.TYPE_CLASS_PHONE);
+        edit_txt_ip_port.setInputType(InputType.TYPE_CLASS_NUMBER);
+
         edit_txt_ip_address.addTextChangedListener(this);
         edit_txt_ip_port.addTextChangedListener(this);
         edit_txt_vin_num.addTextChangedListener(this);
-
 
         btnConnect = (Button)findViewById(R.id.btn_connect);
         btnClearAll = (Button)findViewById(R.id.btn_clear_all);
