@@ -37,9 +37,9 @@
         android:layout_centerVertical="true"
         android:src="@drawable/arrow" />
 
-    <!-- City-->
+    <!-- Functions -->
     <TextView
-        android:id="@+id/tvCity"
+        android:id="@+id/tvFunc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="75dip"
@@ -51,30 +51,18 @@
         android:textStyle="bold"
         android:typeface="sans" />
     
-    <!-- Weather Information-->
+    <!-- Vehicle Information-->
 
     <TextView
         android:id="@+id/tvCondition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tvCity"
-        android:layout_alignLeft="@+id/tvCity"
+        android:layout_below="@+id/tvFunc"
+        android:layout_alignLeft="@+id/tvFunc"
         android:paddingTop="5dip"
         android:layout_centerHorizontal="true"
         android:text="@string/strWeather"
         android:textColor="#343434"
         android:textSize="15dip" />
-
-
-    <TextView
-        android:id="@+id/tvTemp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-		android:layout_marginRight="20dip"
-		android:layout_alignTop="@+id/tvCity"
-        android:layout_toLeftOf="@+id/imageView1"
-        android:text="@string/strTemp"
-        android:textSize="30dip" />
 
 </RelativeLayout>

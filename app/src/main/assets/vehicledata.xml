@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Vehicle>
+	<vehicledata>
+	    <id>1</id>
+		<func>Next service</func>
+		<condition>July 30, 2016</condition>
+		<icon>img_next_service</icon>
+	</vehicledata>
+	<vehicledata>
+	    <id>2</id>
+		<func>Fuel level</func>
+		<condition>11%</condition>
+		<icon>img_fuel_level</icon>
+	</vehicledata>
+	<vehicledata>
+	    <id>3</id>
+		<func>Vehicle</func>
+		<condition>unlocked</condition>
+		<icon>img_vehicle</icon>
+	</vehicledata>
+	<vehicledata>
+	    <id>4</id>
+		<func>Tire Pressure</func>
+		<condition> </condition>
+		<icon>img_tire_pressure</icon>
+	</vehicledata>
+	<vehicledata>
+	    <id>5</id>
+		<func>Trips</func>
+		<condition>Your last journey</condition>
+		<icon>img_trips</icon>
+	</vehicledata>
+	<vehicledata>
+		<id>6</id>
+		<func>Brakepads</func>
+		<condition>normal</condition>
+		<icon>img_brake_pad</icon>
+	</vehicledata>
+</Vehicle>

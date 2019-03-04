@@ -35,19 +35,16 @@ import javax.xml.parsers.DocumentBuilderFactory;
 public class VehicleStatusActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
     // XML node keys
-    static final String KEY_TAG = "weatherdata"; // parent node
+    static final String KEY_TAG = "vehicledata"; // parent node
     static final String KEY_ID = "id";
-    static final String KEY_CITY = "city";
-    static final String KEY_TEMP_C = "tempc";
-    static final String KEY_TEMP_F = "tempf";
+    static final String KEY_FUNC = "func";
     static final String KEY_CONDN = "condition";
-    static final String KEY_SPEED = "windspeed";
     static final String KEY_ICON = "icon";
 
     // List items
     ListView list;
     BinderData adapter = null;
-    List<HashMap<String,String>> weatherDataCollection;
+    List<HashMap<String,String>> vehicleDataCollection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,75 +72,61 @@ public class VehicleStatusActivity extends AppCompatActivity
             // https://www.codeproject.com/Articles/507651/Customized-Android-ListView-with-Image-and-Text
             DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
-            Document doc = docBuilder.parse (getAssets().open("weatherdata.xml"));
+            Document doc = docBuilder.parse (getAssets().open("vehicledata.xml"));
 
-            weatherDataCollection = new ArrayList<HashMap<String,String>>();
+            vehicleDataCollection = new ArrayList<HashMap<String,String>>();
 
             // normalize text representation
             doc.getDocumentElement ().normalize ();
 
-            NodeList weatherList = doc.getElementsByTagName("weatherdata");
+            NodeList vehicleDataList = doc.getElementsByTagName(KEY_TAG);
 
             HashMap<String,String> map = null;
 
-            for (int i = 0; i < weatherList.getLength(); i++) {
+            for (int i = 0; i < vehicleDataList.getLength(); i++) {
 
                 map = new HashMap<String,String>();
 
-                Node firstWeatherNode = weatherList.item(i);
+                Node firstVehicleNode = vehicleDataList.item(i);
 
-                if(firstWeatherNode.getNodeType() == Node.ELEMENT_NODE){
+                if(firstVehicleNode.getNodeType() == Node.ELEMENT_NODE){
 
-                    Element firstWeatherElement = (Element)firstWeatherNode;
+                    Element firstVehicleElement = (Element)firstVehicleNode;
                     //-------
-                    NodeList idList = firstWeatherElement.getElementsByTagName(KEY_ID);
+                    NodeList idList = firstVehicleElement.getElementsByTagName(KEY_ID);
                     Element firstIdElement = (Element)idList.item(0);
                     NodeList textIdList = firstIdElement.getChildNodes();
                     //--id
                     map.put(KEY_ID, ((Node)textIdList.item(0)).getNodeValue().trim());
 
                     //2.-------
-                    NodeList cityList = firstWeatherElement.getElementsByTagName(KEY_CITY);
-                    Element firstCityElement = (Element)cityList.item(0);
-                    NodeList textCityList = firstCityElement.getChildNodes();
-                    //--city
-                    map.put(KEY_CITY, ((Node)textCityList.item(0)).getNodeValue().trim());
-
-                    //3.-------
-                    NodeList tempList = firstWeatherElement.getElementsByTagName(KEY_TEMP_C);
-                    Element firstTempElement = (Element)tempList.item(0);
-                    NodeList textTempList = firstTempElement.getChildNodes();
-                    //--city
-                    map.put(KEY_TEMP_C, ((Node)textTempList.item(0)).getNodeValue().trim());
+                    NodeList funcList = firstVehicleElement.getElementsByTagName(KEY_FUNC);
+                    Element firstFuncElement = (Element)funcList.item(0);
+                    NodeList textFuncList = firstFuncElement.getChildNodes();
+                    //--func
+                    map.put(KEY_FUNC, ((Node)textFuncList.item(0)).getNodeValue().trim());
 
                     //4.-------
-                    NodeList condList = firstWeatherElement.getElementsByTagName(KEY_CONDN);
+                    NodeList condList = firstVehicleElement.getElementsByTagName(KEY_CONDN);
                     Element firstCondElement = (Element)condList.item(0);
                     NodeList textCondList = firstCondElement.getChildNodes();
-                    //--city
+                    //--value
                     map.put(KEY_CONDN, ((Node)textCondList.item(0)).getNodeValue().trim());
 
-                    //5.-------
-                    NodeList speedList = firstWeatherElement.getElementsByTagName(KEY_SPEED);
-                    Element firstSpeedElement = (Element)speedList.item(0);
-                    NodeList textSpeedList = firstSpeedElement.getChildNodes();
-                    //--city
-                    map.put(KEY_SPEED, ((Node)textSpeedList.item(0)).getNodeValue().trim());
-
                     //6.-------
-                    NodeList iconList = firstWeatherElement.getElementsByTagName(KEY_ICON);
+                    NodeList iconList = firstVehicleElement.getElementsByTagName(KEY_ICON);
                     Element firstIconElement = (Element)iconList.item(0);
                     NodeList textIconList = firstIconElement.getChildNodes();
-                    //--city
+                    //--icon
                     map.put(KEY_ICON, ((Node)textIconList.item(0)).getNodeValue().trim());
 
                     //Add to the Arraylist
-                    weatherDataCollection.add(map);
+                    vehicleDataCollection.add(map);
                 }
             }
 
 
-            BinderData bindingData = new BinderData(this,weatherDataCollection);
+            BinderData bindingData = new BinderData(this, vehicleDataCollection);
 
 
             list = (ListView) findViewById(R.id.list);
@@ -180,11 +163,11 @@ public class VehicleStatusActivity extends AppCompatActivity
 //                     * 4.	Temperature
 //                     * 5.	Weather icon
 //                     */
-//                    i.putExtra("city", weatherDataCollection.get(position).get(KEY_CITY));
-//                    i.putExtra("weather", weatherDataCollection.get(position).get(KEY_CONDN));
-//                    i.putExtra("windspeed", weatherDataCollection.get(position).get(KEY_SPEED));
-//                    i.putExtra("temperature", weatherDataCollection.get(position).get(KEY_TEMP_C));
-//                    i.putExtra("icon", weatherDataCollection.get(position).get(KEY_ICON));
+//                    i.putExtra("city", vehicleDataCollection.get(position).get(KEY_CITY));
+//                    i.putExtra("weather", vehicleDataCollection.get(position).get(KEY_CONDN));
+//                    i.putExtra("windspeed", vehicleDataCollection.get(position).get(KEY_SPEED));
+//                    i.putExtra("temperature", vehicleDataCollection.get(position).get(KEY_TEMP_C));
+//                    i.putExtra("icon", vehicleDataCollection.get(position).get(KEY_ICON));
 //
 //                    // start the sample activity
 //                    startActivity(i);
